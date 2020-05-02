@@ -6,7 +6,7 @@ let Student = db.Student
 let router = express.Router()  //matches the request
 
 router.get('/students', function(req, res, next){
-    Student.findAll( {order:['name']}).then( students => { //findAll , Create, Distroy
+    Student.findAll( {order:['starID']}).then( students => { //findAll , Create, Distroy
         return res.json(students)
     })
     .catch(err => next(err))
